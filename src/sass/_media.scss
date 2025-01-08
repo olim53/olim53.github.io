@@ -1,0 +1,328 @@
+@media (max-width: 1199.98px) {
+    .navbar {
+        &_item:not(:last-child) {padding-right: 20px;}
+        &_link {font-size: 13px;}
+    }
+    .promo {
+        padding-bottom: 105px;
+        &_header {font-size: 50px;}
+        &_btn {margin-top: 90px;}
+    }
+    .mobile {
+        &_card {
+            width: 100%;
+        }
+    }
+    .max-order-lg-first {
+        order: -1;
+    }
+    %justify-content-center {
+        justify-content: center;
+    }
+    .footer {
+        &_menu {
+            margin-bottom: 18px;
+        }
+        &_titles {
+            @extend %justify-content-center;
+        }
+        &_title_item {
+            margin: 0 23px;
+        }
+        &_subt {
+            @extend %justify-content-center;
+            &_item {
+                margin: 0 15px;
+            }
+        }
+        &_downapps {
+            @extend %justify-content-center;
+        }
+    }
+    .social_items {
+        @extend %justify-content-center;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        &_item:not(:last-child) {padding-right: 8px;}
+        &_link {font-size: 10px;}
+    }
+    %mt-13 {
+        margin-top: 13px;
+    }
+    .subnavbar {
+        height: 74px;
+        &_logo {
+            @extend %mt-13;
+            &_img {
+                width: 100%;
+            }
+        }
+        &_official {
+            font-size: 12px;
+        }
+        &_call {
+            margin-top: 15px;
+            font-size: 10px;
+        }
+        &_phone a {
+            font-size: 20px;
+        }
+        &_btn {
+            @extend %mt-13;
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+    .promo {
+        min-height: auto;
+        padding: 130px 0 90px;
+        &_header {
+            font-size: 40px;
+        }
+        &_subheader {
+            font-size: 30px;
+        }
+        &_desc {
+            font-size: 14px;
+        }
+        &_btn {
+            margin-top: 60px;
+            width: 220px;
+            height: 56px;
+            font-size: 16px;
+        }
+    }
+    .title {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    .topping {
+        &_item {
+            flex-direction: column;
+            &_title {
+                margin-top: 23px;
+            }
+        }
+    }
+    .mobile {
+        &_card {
+            height: 255px;
+            &_subtitle {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+    .cities {
+        min-height: 620px;
+    }
+}
+@media (max-width: 767.98px) {
+    $navbar-sm-height: 42px;
+    header {
+        min-height: $navbar-sm-height;
+    }
+    .navbar {
+        min-height: $navbar-sm-height;
+        &_menu{
+            position: absolute;
+            top: 0;
+            right: -60%;
+            width: 60%;
+            height: 100vh;
+            background: rgba(33, 33, 33, 0.8);
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 10px 20px 35px;
+            transition: all .8s;
+            &.active {
+                top: 0;
+                right: 0;
+            }
+        }
+        &_item:not(:last-child) {
+            border: none;
+            margin: 3px 0;
+        }
+        &_link {
+            display: block;
+            font-size: 17px;
+        }
+    }
+    .subnavbar {
+        top: $navbar-sm-height;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        transition: all .8s;
+        span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin-bottom: 2px;
+            background-color: $text-color-primary;
+            transition: all 1s;
+        }
+        &.active {
+            right: 65%;
+            right: calc(60% + 10px);
+            span {
+                margin-bottom: -2px;
+                &:nth-child(1) {
+                    transform: translateY(3px) rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    transform: translateY(3px) rotate(45deg);
+                }
+
+            }
+        }
+    }
+    .subnavbar {
+        height: 70px;
+        &_official {display: none;}
+        &_logo {margin-top: 20px;}
+        &_phone { 
+            margin-top: 5px;
+            a {
+                font-size: 15px;
+            }
+        }
+        &_btn {
+            display: block;
+            height: 26px;
+            margin: 5px 0 0 auto;
+            max-width: 100%;
+            width: 180px;
+        }
+    }
+    .promo {
+        &_header {
+            font-size: 35px;
+        }
+    }
+    .topping {
+        &_items {
+            div[class^="col"] {
+                &:nth-child(2n),
+                &:nth-child(2n+1) {
+                    .topping_item_box {
+                        max-width: 371px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .choice {
+        min-height: 700px;
+        padding: 56px 0;
+    }
+    .footer {
+        &_subt {
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item {
+                margin: 0 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .subnavbar {
+        &_phone {
+            a {
+                font-size: 12px;
+            }
+        }
+        &_btn {
+            width: 110px;
+            height: 22px;
+            font-size: 10px;
+        }
+    }
+    .promo {
+        &_header {
+            font-size: 30px;
+            line-height: 35px;
+        }
+        &_subheader {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &_desc {
+            display: none;
+        }
+        &_btn {
+            width: 210px;
+            height: 50px;
+        }
+    }
+    .title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 16px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .choice {
+        padding: 26px 0 22px;
+        min-height: 393px;
+        .title, .subtitle { display: none;}
+        &_card_desc {
+            color: $text-color-primary;
+        }
+    }
+    .condition {
+        padding: 33px 0 30px;
+        &_item {
+            margin-bottom: 30px;
+            &_label {
+                font-size: 16px;
+            }
+            &_point {
+                font-size: 14px;
+                padding-left: 30px;
+                background-position-x: left;
+            }
+            &.danger &_point {
+                background-position-x: left;
+            }
+        }
+    }
+    .cities {
+        padding: 24px 0 29px;
+        min-height: 360px;
+        &_link {
+            text-align: center;
+        }
+    }
+    .footer {
+        .line--blue {
+            max-width: 100%;
+        }
+        &_title_item {
+            margin: 0 4px;
+            a {
+                font-size: 14px;
+            }
+        }
+        &_downapps .down_app img {
+            max-width: 100%;
+        } 
+    }
+}
